@@ -1,0 +1,106 @@
+:root {
+  --color-primary:#22234b;
+  --color-secondary: #373b69;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-secondary);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: 3.125rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: .5rem 1rem;
+}
+
+.search:focus {
+  outline: 0;
+  background-color: var(--color-primary);
+}
+
+.search::placeholder {
+  color: #737ac5;
+}
+
+.movie {
+  border-radius: 3px;
+  box-sizing: 0.2px 4px 5px rgba(0,0,0,0.1);
+  background-color: var(--color-secondary);
+  width: 18.75rem;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #fff;
+  display: flex;
+  letter-spacing: .5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.movie-info span {
+  background-color: var(--color-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.orange {
+  color: #ff922b;
+}
+
+.movie-info span.red {
+  color: #c92a2a;
+}
+
+.movie-info span.green {
+  color: #51cf66;
+}
+
+.overview {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  max-height: 100%;
+  transform: translate(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
